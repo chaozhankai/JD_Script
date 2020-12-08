@@ -1246,7 +1246,7 @@ function shareCodesFormat() {
     if (jdFruitShareArr[$.index - 1]) {
       newShareCodes = jdFruitShareArr[$.index - 1].split('@');
     } else {
-      console.log(`由于您第${$.index}个京东账号未提供shareCode,将不进行助力\n`)
+      console.log(`由于您第${$.index}个京东账号未提供shareCode,将不助力\n`)
     }
     console.log(`第${$.index}个京东账号将要助力的好友${JSON.stringify(newShareCodes)}`)
     resolve();
