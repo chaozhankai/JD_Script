@@ -1248,11 +1248,6 @@ function shareCodesFormat() {
     } else {
       console.log(`由于您第${$.index}个京东账号未提供shareCode,将不进行助力\n`)
     }
-    const readShareCodeRes = await readShareCode();
-    if (readShareCodeRes && readShareCodeRes.code === 200) {
-      // newShareCodes = newShareCodes.concat(readShareCodeRes.data || []);
-      newShareCodes = [...new Set([...newShareCodes, ...(readShareCodeRes.data || [])])];
-    }
     console.log(`第${$.index}个京东账号将要助力的好友${JSON.stringify(newShareCodes)}`)
     resolve();
   })
